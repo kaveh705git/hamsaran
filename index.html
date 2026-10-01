@@ -682,6 +682,26 @@
         url = `mailto:?subject=${subject}&body=${encodedText}`;
         break;
 
+      case 'ble':
+        if (!phone) {
+          showToast('برای بله شماره همسر را وارد کن ⚠️', 'error');
+          return;
+        }
+        // ارسال مستقیم به شماره مشخص در واتساپ
+        url = `https://ble.ir/${phone}?text=${encodedText}`;
+        break;
+
+      case 'Rubika':
+        if (!phone) {
+          showToast('برای روبیکا شماره همسر را وارد کن ⚠️', 'error');
+          return;
+        }
+        // ارسال مستقیم به شماره مشخص در واتساپ
+        url = `https://rubika.ir/${phone}?text=${encodedText}`;
+        break;
+      
+      
+
       default:
         showToast('پیام‌رسان معتبر انتخاب کن ⚠️', 'error');
         return;
