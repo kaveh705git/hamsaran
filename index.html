@@ -648,7 +648,7 @@
       `📊 میزان دلخوری: ${mood}\n\n` +
       `📝 متن پیام:\n${message}\n\n` +
       `ارسال شده از سایت دلخوری‌های همسران` +
-     `https://kaveh705git.github.io/hamsaran/`;
+     ` https://kaveh705git.github.io/hamsaran `;
 
     const encodedText = encodeURIComponent(fullText);
 
@@ -688,7 +688,7 @@
           showToast('برای بله شماره همسر را وارد کن ⚠️', 'error');
           return;
         }
-        // ارسال مستقیم به شماره مشخص در واتساپ
+        // ارسال مستقیم به شماره مشخص در بله 
         url = `https://ble.ir/${phone}?text=${encodedText}`;
         break;
 
@@ -697,8 +697,8 @@
           showToast('برای روبیکا شماره همسر را وارد کن ⚠️', 'error');
           return;
         }
-        // ارسال مستقیم به شماره مشخص در واتساپ
-        url = `https://rubika.ir/${phone}?text=${encodedText}`;
+        // ارسال مستقیم به شماره مشخص در روبیکا 
+        url = `https://rubika.ir/share/url?url=&text=${encodedText}`;
         break;
       
       
